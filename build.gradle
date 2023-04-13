@@ -1,7 +1,7 @@
 plugins {
 	id 'java'
 	id 'org.springframework.boot' version '2.7.10'
-	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
 }
 
 group = 'com.example'
@@ -19,4 +19,9 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+tasks.bootJar {
+	mainClass = "com.example.cicd.CicdApplication"
+	archiveFileName.set("bluesun.jar")
 }
