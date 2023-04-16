@@ -30,8 +30,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+      name: Checkout
+
 
       # Setup gcloud CLI
       - uses: GoogleCloudPlatform/github-actions/setup-gcloud@v0
